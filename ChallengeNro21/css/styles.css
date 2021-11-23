@@ -1,0 +1,54 @@
+body{
+    position: relative;
+    margin: 0;
+
+}
+
+#container{
+    border-style: solid;
+    border-color: black;
+    border-style: double;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#bordersize{
+    width: 5vw;
+}
+
+#select{
+    height: 8vw;
+}
+
+#btn_dibujar{
+    width: 7vw;
+    margin-left: 15px;
+}
+
+#btn_reset{
+    width: 7vw;
+    margin-left: 15px;
+}
+
+#circle{
+    position: absolute;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 80%;
+}
+
+@media screen and (max-width: 592px) {
+
+    #circle {
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
