@@ -157,13 +157,4 @@ p {
     top: 1.5px;
   }
 
-  @media (max-width: 375px) {
-    .display p{
-      font-size: 0.75em;
-    }
-    .strict-icon {
-      top: 1.5px;
-    }
-  } 
- 
 } 
