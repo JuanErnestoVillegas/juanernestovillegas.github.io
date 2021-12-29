@@ -140,7 +140,7 @@ p {
   }
 }
 
-@media (min-width: 370px) {
+@media (min-width: 580px) {
   .display {
     font-size: 1.5em;
   }
@@ -156,4 +156,14 @@ p {
   .strict-icon {
     top: 1.5px;
   }
+
+  @media (max-width: 375px) {
+    .display p{
+      font-size: 0.75em;
+    }
+    .strict-icon {
+      top: 1.5px;
+    }
+  } 
+ 
 } 
