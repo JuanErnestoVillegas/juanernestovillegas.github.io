@@ -140,7 +140,7 @@ p {
   }
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .display {
     font-size: 1.5em;
   }
@@ -149,7 +149,7 @@ p {
   }
 } 
 
-@media (min-width: 360px) {
+@media (max-width: 360px) {
   .display {
     font-size: 0.75em;
   }
