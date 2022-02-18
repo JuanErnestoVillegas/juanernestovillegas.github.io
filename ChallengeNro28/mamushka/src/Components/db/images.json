@@ -1,0 +1,24 @@
+{
+    "images": [
+      {
+        "id": 1,
+        "url": "../assets/img/Mamushka01.jpg"        
+      },
+      {
+        "id": 2,
+        "url": "../assets/img/Mamushka02.jpg"                 
+      },
+      {
+        "id": 3,
+        "url": "../assets/img/Mamushka03.jpg"                 
+      },
+      {
+        "id": 4,
+        "url": "../assets/img/Mamushka04.jpg"                 
+      },
+      {
+        "id": 5,
+        "url": "../assets/img/Mamushka05.jpg"                 
+      }
+    ]
+  }
