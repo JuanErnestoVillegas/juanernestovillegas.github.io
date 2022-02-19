@@ -2,28 +2,36 @@ import React, { useState } from "react";
 import Picture from "./Picture";
 import { useDrop } from "react-dnd";
 import "../App.css";
+let id_ant;
 
 const PictureList = [
-  {
-    id: 1,
-    url:
-    "https://yt3.ggpht.com/ytc/AAUvwnjOQiXUsXYMs8lwrd4litEEqXry1-atqJavJJ09=s900-c-k-c0x00ffffff-no-rj",
-  },
-  {
-    id: 2,
-    url:
-      "https://media-exp1.licdn.com/dms/image/C4D03AQExheo0sff_yQ/profile-displayphoto-shrink_200_200/0/1590072898568?e=1630540800&v=beta&t=_W-gWZewSBYQ-UAjpGvR8h_8Vvo202IHQQissbK2aKc",
-  },
-  {
-    id: 3,
-    url:
-      "https://yt3.ggpht.com/pe57RF1GZibOWeZ9GwRWbjnLDCK2EEAeQ3u4iMAFNeaz-PN9uSsg1p2p32TZUedNnrUhKfoOuMM=s900-c-k-c0x00ffffff-no-rj",
-  },
-];
+    {
+      id: 1,
+      url: "../assets/img/Mamushka01.jpg"        
+    },
+    {
+      id: 2,
+      url: "../assets/img/Mamushka02.jpg"                 
+    },
+    {
+      id: 3,
+      url: "../assets/img/Mamushka03.jpg"                 
+    },
+    {
+      id: 4,
+      url: "../assets/img/Mamushka04.jpg"                 
+    },
+    {
+      id: 5,
+      url: "../assets/img/Mamushka05.jpg"                 
+    }
+  ];
+
+
 
 function DragandDrop() {
   const [board, setBoard] = useState([]);
-
+  
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "image",
     drop: (item) => addImageToBoard(item.id),
@@ -33,9 +41,11 @@ function DragandDrop() {
   }));
 
   const addImageToBoard = (id) => {
+    console.log(id);
     const pictureList = PictureList.filter((picture) => id === picture.id);
     //setBoard((board) => [...board, pictureList[0]]); //*una imagen debajo de otra
-    setBoard([pictureList[0]]);  //*tapo una imagen con otra
+    setBoard([pictureList[0]]);  //*superpongo una imagen con otra
+    id_ant= id;
   };
   return (
     <>
