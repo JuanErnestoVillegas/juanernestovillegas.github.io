@@ -70,7 +70,7 @@ function DragandDrop() {
         })}
       </div>
       <div>
-          <button onClick={refreshPage}>Reiniciar el juego.</button>
+          <button className="ButtonR" onClick={refreshPage}>Reiniciar el juego.</button>
       </div>
     </>
   );
