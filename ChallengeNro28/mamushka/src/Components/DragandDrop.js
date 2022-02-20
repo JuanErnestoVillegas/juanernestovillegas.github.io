@@ -8,7 +8,7 @@ function refreshPage() {
   window.location.reload(false);
 }
 
-const PictureList = [
+const PictureListOriginal = [
     {
       id: 1,
       url: "../assets/img/Mamushka01.jpg"        
@@ -31,6 +31,8 @@ const PictureList = [
     }
   ];
 
+let PictureList = PictureListOriginal;
+
 function DragandDrop() {
   const [board, setBoard] = useState([]);
   
@@ -41,8 +43,7 @@ function DragandDrop() {
       isOver: !!monitor.isOver(),
     }),
   }));
-   
-
+  
   const addImageToBoard = (id) => {
     if(id>id_ant){
     console.log(id);
@@ -51,9 +52,10 @@ function DragandDrop() {
     setBoard([pictureList[0]]);  //*superpongo una imagen con otra
     id_ant=id;
     console.log(`ID ANT:`,id_ant);
+    PictureList[id_ant-1] ='';
     }else{
-      setTimeout(function(){
-        alert('Debes colocar una imágen más grande que la colocada antes en el Tablero.');   
+       setTimeout(function(){
+          alert('Debes colocar una imágen más grande que la colocada antes en el Tablero.');   
       }, 0);
     }
   };
@@ -68,6 +70,9 @@ function DragandDrop() {
         {board.map((picture) => {          
           return <Picture url={picture.url} id={picture.id}/>;  
         })}
+      </div>
+      <div>
+        <h1>MAMUSHKA</h1>
       </div>
       <div>
           <button className="ButtonR" onClick={refreshPage}>Reiniciar el juego.</button>
