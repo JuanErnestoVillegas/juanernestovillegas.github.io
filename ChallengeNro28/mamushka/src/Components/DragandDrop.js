@@ -28,6 +28,10 @@ const PictureListOriginal = [
     {
       id: 5,
       url: "../assets/img/Mamushka05.jpg"                 
+    },
+    {
+      id: 6,
+      url: "../assets/img/Mamushka06.jpg"                 
     }
   ];
 
@@ -51,7 +55,6 @@ function DragandDrop() {
     //setBoard((board) => [...board, pictureList[0]]); //*una imagen debajo de otra
     setBoard([pictureList[0]]);  //*superpongo una imagen con otra
     id_ant=id;
-    console.log(`ID ANT:`,id_ant);
     PictureList[id_ant-1] ='';
     }else{
        setTimeout(function(){
