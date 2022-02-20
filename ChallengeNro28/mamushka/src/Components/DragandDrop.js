@@ -4,6 +4,10 @@ import { useDrop } from "react-dnd";
 import "../App.css";
 let id_ant=0;
 
+function refreshPage() {
+  window.location.reload(false);
+}
+
 const PictureList = [
     {
       id: 1,
@@ -64,6 +68,9 @@ function DragandDrop() {
         {board.map((picture) => {          
           return <Picture url={picture.url} id={picture.id}/>;  
         })}
+      </div>
+      <div>
+          <button onClick={refreshPage}>Reiniciar el juego.</button>
       </div>
     </>
   );
