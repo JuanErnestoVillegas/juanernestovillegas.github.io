@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Picture from "./Picture";
 import { useDrop } from "react-dnd";
 import "../App.css";
-let id_ant;
+let id_ant=0;
 
 const PictureList = [
     {
@@ -27,8 +27,6 @@ const PictureList = [
     }
   ];
 
-
-
 function DragandDrop() {
   const [board, setBoard] = useState([]);
   
@@ -39,13 +37,21 @@ function DragandDrop() {
       isOver: !!monitor.isOver(),
     }),
   }));
+   
 
   const addImageToBoard = (id) => {
+    if(id>id_ant){
     console.log(id);
     const pictureList = PictureList.filter((picture) => id === picture.id);
     //setBoard((board) => [...board, pictureList[0]]); //*una imagen debajo de otra
     setBoard([pictureList[0]]);  //*superpongo una imagen con otra
-    id_ant= id;
+    id_ant=id;
+    console.log(`ID ANT:`,id_ant);
+    }else{
+      setTimeout(function(){
+        alert('Debes colocar una imágen más grande que la colocada antes en el Tablero.');   
+      }, 0);
+    }
   };
   return (
     <>
@@ -55,8 +61,8 @@ function DragandDrop() {
         })}
       </div>
       <div className="Board" ref={drop}>
-        {board.map((picture) => {
-          return <Picture url={picture.url} id={picture.id} />;
+        {board.map((picture) => {          
+          return <Picture url={picture.url} id={picture.id}/>;  
         })}
       </div>
     </>
