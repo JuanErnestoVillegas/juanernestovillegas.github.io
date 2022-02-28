@@ -48,6 +48,7 @@ const MainPage = () => {
           <UpSearch xs={2}>           
             <SearchBar search={search} handleKeyUp={handleKeyUp}/>
           </UpSearch>
+          <h3>{search}</h3>
           <Col xs={10} className='d-flex flex-wrap'>
               <Results results={gifs}/>
           </Col>
