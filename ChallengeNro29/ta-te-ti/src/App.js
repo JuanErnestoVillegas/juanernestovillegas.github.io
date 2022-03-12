@@ -1,8 +1,10 @@
 import './App.css';
-import Tablero from './Components/Tablero/Tablero'
-import CommentForm from './Components/CommentForm/ComplaintForm'
+import Tablero from './Components/Tablero/Tablero';
+import ComplaintForm from './Components/CommentForm/ComplaintForm';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Container, Row, Col} from 'react-bootstrap';
+
+//import shortid from 'shortid';
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
         </Row>
         <Row>
           <Col>
-              <CommentForm/>
+              <ComplaintForm/>
           </Col>
         </Row>
       </Container>

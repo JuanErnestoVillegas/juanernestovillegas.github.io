@@ -67,4 +67,4 @@ const Tablero = () =>{
       );
     }
      
-    export default handleStatus;
+    export default Tablero;
