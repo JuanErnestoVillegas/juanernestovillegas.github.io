@@ -1,6 +1,6 @@
-import { useState } from "react"
-import Bloque from '../Bloque/Bloque';
-import './Tablero.css'
+import { useState } from "react";
+import Bloque from './../Bloque/Bloque';
+import './Tablero.css';
 
 
 const Tablero = () =>{
@@ -10,10 +10,10 @@ const Tablero = () =>{
 
     const handlePlay = (position) => {
         if(game[position]!=='') return;
-        let newState = game;
+        let newState = game;        
         newState[position] = player;
         setGame(newState);
-
+        
         if(player==='X'){
             setPlayer('O')
         }else{
@@ -47,19 +47,20 @@ const Tablero = () =>{
 
     return (
         <>
-        <p>{status}</p>
+        <div id="titulo">TA-TE-TI</div>
+        <h3>{status}</h3>
         <div className="table-row">
-            <Bloque onClick={() =>handlePlay(0)} player={game[0]} />  
+            <Bloque onClick={() => handlePlay(0)} player={game[0]} />  
             <Bloque onClick={() => handlePlay(1)} player={game[1]} /> 
             <Bloque onClick={() => handlePlay(2)} player={game[2]} />           
         </div>
         <div className="table-row">
-            <Bloque onClick={() =>handlePlay(3)} player={game[3]} />  
+            <Bloque onClick={() => handlePlay(3)} player={game[3]} />  
             <Bloque onClick={() => handlePlay(4)} player={game[4]} /> 
             <Bloque onClick={() => handlePlay(5)} player={game[5]} />           
         </div>
         <div className="table-row">
-            <Bloque onClick={() =>handlePlay(6)} player={game[6]} />  
+            <Bloque onClick={() => handlePlay(6)} player={game[6]} />  
             <Bloque onClick={() => handlePlay(7)} player={game[7]} /> 
             <Bloque onClick={() => handlePlay(8)} player={game[8]} />           
         </div>

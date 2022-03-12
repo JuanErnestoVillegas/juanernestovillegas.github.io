@@ -1,4 +1,5 @@
-import './Bloque.css'
+import './Bloque.css';
+import Proptypes from 'prop-types';
 
 const Bloque = ({onClick}) => {
     return (
@@ -7,3 +8,7 @@ const Bloque = ({onClick}) => {
 }
  
 export default Bloque;
+
+Bloque.propTypes = {
+  player: Proptypes.string.isRequired
+}
