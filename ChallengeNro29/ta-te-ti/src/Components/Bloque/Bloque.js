@@ -1,8 +1,8 @@
 import './Bloque.css'
 
-const Bloque = ({player}) => {
+const Bloque = ({onClick}) => {
     return (
-        <button className='bloque'>{player}</button>
+        <button className='square m-1' onClick={onClick}></button>        
       );
 }
  
