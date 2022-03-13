@@ -34,7 +34,6 @@ const Tablero = () =>{
         ];
         lines.forEach(([x,y,z])=>{
             if(game[x]==game[y] && game[x]==game[z] && game[x]!=''){
-
                 status = `Ganó ${player}`;
             }else{
                 status = `Juega ${player}`;
@@ -49,6 +48,7 @@ const Tablero = () =>{
         <>
         <div id="titulo">TA-TE-TI</div>
         <h3>{status}</h3>
+        <br />
         <div className="table-row">
             <Bloque onClick={() => handlePlay(0)} player={game[0]} />  
             <Bloque onClick={() => handlePlay(1)} player={game[1]} /> 
@@ -66,6 +66,7 @@ const Tablero = () =>{
         </div>
         </>
       );
-    }
+    };
      
     export default Tablero;
+
