@@ -1,3 +1,16 @@
+
+body {
+  background: #07B8CE;
+  background: -moz-linear-gradient(top, #07B8CE 0%, #1C6EA4 50%, #3630C5 100%);
+  background: -webkit-linear-gradient(top, #07B8CE 0%, #1C6EA4 50%, #3630C5 100%);
+  background: linear-gradient(to bottom, #07B8CE 0%, #1C6EA4 50%, #3630C5 100%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }

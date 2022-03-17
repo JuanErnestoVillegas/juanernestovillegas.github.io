@@ -14,11 +14,11 @@ function App() {
               <Tablero/>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col>
               <ComplaintForm/>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
   );
 }
