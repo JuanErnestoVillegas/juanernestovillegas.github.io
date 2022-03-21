@@ -20,7 +20,7 @@ const Tablero = () =>{
             let newState = game;        
             newState[position] = player;
             console.log(`JUGADOR: ${player}`);
-            if(finalizada==false){
+            if(finalizada===false){
                 setGame(newState);
                 if(player==="X"){
                     setPlayer("O")
@@ -44,7 +44,7 @@ const Tablero = () =>{
 
 
         lines.forEach(([x,y,z])=>{
-            if(game[x]==game[y] && game[x]==game[z] && game[x]!=''){           
+            if(game[x]===game[y] && game[x]===game[z] && game[x]!==''){           
                 finalizada=true;
                 playerAnt=game[x];          
                 status = `Ganó ${playerAnt}`;     
